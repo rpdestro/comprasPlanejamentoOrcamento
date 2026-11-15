@@ -88,6 +88,12 @@ git push
 
 O `.gitignore` mantém fora do repositório `node_modules`, arquivos `.env` e configurações locais. Não é necessário utilizar push forçado.
 
-A pasta publicada pela aplicação é `dist/`. Enviar alterações ao GitHub só atualiza um site publicado se o serviço de hospedagem estiver configurado para servir essa pasta.
+## Publicação no GitHub Pages
+
+Site: https://rpdestro.github.io/comprasPlanejamentoOrcamento/
+
+O workflow `.github/workflows/pages.yml` publica a pasta `dist/` a cada push na branch `main`. Antes de publicar, ele executa `npm run check` e `npm test`; se algum falhar, o site não é atualizado. O andamento aparece na aba *Actions* do repositório, e a publicação também pode ser disparada manualmente por lá.
+
+Configuração única: em *Settings → Pages → Build and deployment → Source*, selecione **GitHub Actions**.
 
 Veja [a documentação detalhada](docs/README.md) para as regras de operação.

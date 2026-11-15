@@ -1,0 +1,13 @@
+{
+  "name": "supri-gestao-materiais",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --check dist/js/app.js && node --check dist/js/fileio.js && node --check dist/js/modals.js && node --check dist/js/store.js && node --check dist/js/requests.js && node --check dist/js/request-logic.js && node --check dist/js/ata-logic.js && node --check dist/js/registrations.js && node --check dist/js/picker.js && node --check dist/js/ata-items.js",
+    "test": "node tools/qa.mjs && node tools/ata-qa.mjs"
+  },
+  "devDependencies": {
+    "happy-dom": "21.0.4"
+  }
+}
